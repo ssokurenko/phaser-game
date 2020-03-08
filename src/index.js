@@ -4,8 +4,8 @@ import logoImg from './assets/logo.png'
 const config = {
   type: Phaser.AUTO,
   parent: 'phaser-game',
-  width: 800,
-  height: 600,
+  width: 1024,
+  height: 768,
   scene: {
     preload: preload,
     create: create
@@ -23,8 +23,8 @@ function create() {
   this.tweens.add({
     targets: logo,
     y: 450,
-    duration: 2000,
-    ease: 'Power2',
+    duration: 1000,
+    ease: 'Power',
     yoyo: true,
     loop: -1
   })
