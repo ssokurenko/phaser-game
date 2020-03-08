@@ -1,11 +1,11 @@
 import Phaser from 'phaser'
-import logoImg from './assets/logo.png'
+import characterImage from './assets/mario-run.png'
 
 const config = {
   type: Phaser.AUTO,
-  parent: 'phaser-game',
-  width: 1024,
-  height: 768,
+  parent: 'game',
+  width: 800,
+  height: 600,
   scene: {
     preload: preload,
     create: create
@@ -15,11 +15,12 @@ const config = {
 const game = new Phaser.Game(config)
 
 function preload() {
-  this.load.image('logo', logoImg)
+  this.load.image('mario-run', characterImage)
 }
 
 function create() {
-  const logo = this.add.image(400, 150, 'logo')
+  const logo = this.add.image(400, 150, 'mario-run')
+  logo.width = 50
   this.tweens.add({
     targets: logo,
     y: 450,
